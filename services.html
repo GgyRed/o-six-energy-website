@@ -1,210 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Our Services | O-Six Energy Limited</title>
-<style>
-  :root {
-    --primary: #1b5e20; /* deep green */
-    --secondary: #f4f4f4;
-    --accent: #f9a825; /* solar yellow */
-    --text: #333;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | O-Six Energy Nigeria Limited</title>
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: "Lato", Arial, sans-serif;
-    color: var(--text);
-    background: #fff;
-    line-height: 1.6;
-  }
-
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    color: var(--accent);
-  }
-
-  .menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  .page-header {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url("images/hero-solar-construction.jpg.png") center/cover no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-  }
-
-  .page-header h2 {
-    font-size: 2rem;
-  }
-
-  section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 20px;
-  }
-
-  .service-card {
-    background: var(--secondary);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    transition: all 0.3s ease;
-  }
-
-  .service-card:hover {
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
-  }
-
-  .service-card h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-  }
-
-  .service-card p {
-    text-align: justify;
-    font-size: 0.95rem;
-  }
-
-  footer {
-    background: var(--primary);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    nav ul {
-      display: none;
-      flex-direction: column;
-      background: var(--primary);
-      width: 100%;
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav ul.active {
+    /* ===== BASE ===== */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1c1c1c;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .nav {
       display: flex;
-      margin-top: 10px;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
     }
 
-    .menu-toggle {
-      display: block;
-      color: #fff;
+    .nav a {
+      margin-left: 24px;
+      font-weight: 500;
     }
 
-    .page-header h2 {
-      font-size: 1.6rem;
+    .btn {
+      background-color: #1f7a4d;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
     }
-  }
-</style>
+
+    /* ===== BRAND ===== */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 44px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    /* ===== INNER HERO ===== */
+    .page-hero {
+      position: relative;
+      padding: 100px 0;
+      background-image: url("images/services-hero.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(15, 42, 29, 0.6);
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      font-size: 36px;
+    }
+
+    /* ===== SERVICE SECTIONS ===== */
+    .service {
+      margin-bottom: 64px;
+    }
+
+    .service h2 {
+      color: #0f2a1d;
+      margin-bottom: 12px;
+    }
+
+    .service ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .service ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #0f2a1d;
+      color: #ffffff;
+      padding: 40px 0;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
-<header>
-  <h1>O-Six Energy Ltd</h1>
-  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-  <nav>
-    <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
-<div class="page-header">
-  <h2>Our Services</h2>
-  <p>Delivering engineering excellence for renewable energy infrastructure</p>
-</div>
-
-<section>
-  <div class="services-list">
-    <div class="service-card">
-      <h3>Civil Works for Renewable Projects</h3>
-      <p>We handle full-scale civil construction works for solar, wind, and hybrid renewable energy installations — ensuring durability and compliance with international standards.</p>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="images/logo.png" alt="O-Six Energy Logo" />
+        <strong>O-Six Energy</strong>
+      </div>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="service-card">
-      <h3>Solar Base & Equipment Infrastructure</h3>
-      <p>Our expertise covers the design and construction of durable foundations for PV modules, inverter rooms, and energy storage systems across diverse terrains.</p>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Services</h1>
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>Structural & Perimeter Construction</h3>
-      <p>We construct secure equipment shelters, boundary fencing, and technical buildings that safeguard high-value renewable energy installations.</p>
+  <!-- SERVICES CONTENT -->
+  <section>
+    <div class="container">
+
+      <div class="service">
+        <h2>Civil Construction for Renewable Mini-Grids</h2>
+        <p>
+          We provide specialized civil construction services that form the
+          foundation of renewable mini-grid projects. Our work ensures that
+          energy infrastructure is built on safe, stable, and durable
+          foundations suitable for long-term operation.
+        </p>
+        <ul>
+          <li>Site clearing and preparation</li>
+          <li>Earthworks and excavation</li>
+          <li>Structural foundations for energy assets</li>
+          <li>Access roads, fencing, and compound works</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h2>Transmission & Distribution Infrastructure</h2>
+        <p>
+          O-Six Energy delivers transmission and distribution services that
+          enable the safe and efficient delivery of electricity across
+          communities, facilities, and businesses.
+        </p>
+        <ul>
+          <li>Pole erection and mounting</li>
+          <li>Conductor stringing</li>
+          <li>Low-tension (LT) distribution networks</li>
+          <li>High-tension (HT) line installations</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h2>Solar Solutions for Homes & Businesses</h2>
+        <p>
+          We design and install solar energy systems that provide reliable power
+          for residential, commercial, and institutional clients seeking clean
+          and cost-effective energy solutions.
+        </p>
+        <ul>
+          <li>Energy needs assessment</li>
+          <li>System design and sizing</li>
+          <li>Solar installation and commissioning</li>
+          <li>Battery storage integration</li>
+        </ul>
+      </div>
+
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>Project Support for Global Energy Firms</h3>
-      <p>O-Six Energy partners with international renewable developers to provide local expertise, logistics support, and on-ground project management.</p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 O-Six Energy Nigeria Limited. All rights reserved.</p>
     </div>
+  </footer>
 
-    <div class="service-card">
-      <h3>Home Solar Installations & Maintenance</h3>
-      <p>We deliver cost-effective solar home systems and maintenance services, helping families and businesses embrace clean energy independence.</p>
-    </div>
-
-    <div class="service-card">
-      <h3>Consultancy & Technical Advisory</h3>
-      <p>Our specialists offer feasibility studies, project audits, and consultancy services to optimize renewable energy deployment in developing regions.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 O-Six Energy Limited. All Rights Reserved. | info@osixenergy.com | +234 000 000 0000
-</footer>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-  }
-</script>
 </body>
 </html>

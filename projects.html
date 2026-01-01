@@ -1,192 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O-Six Energy Limited | Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Experience | O-Six Energy Nigeria Limited</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== BASE ===== */
     body {
-      font-family: 'Lato', Arial, sans-serif;
-      color: #333;
-      background-color: #f9f9f9;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1c1c1c;
       line-height: 1.6;
+      background-color: #ffffff;
     }
 
-    header {
-      background-color: #004d26;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      font-size: 20px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: url('images/IMG_0280.jpg') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      background-color: #004d26; /* fallback */
-      text-align: center;
-    }
-    .hero h2 {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 28px;
-    }
-
-    .projects-section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .projects-section h3 {
-      color: #004d26;
-      margin-bottom: 25px;
-      text-align: center;
-      font-size: 26px;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+    a {
       text-decoration: none;
       color: inherit;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+
+    /* ===== LAYOUT ===== */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    section {
+      padding: 80px 0;
     }
 
-    .project-info {
-      padding: 15px 20px;
+    /* ===== HEADER ===== */
+    header {
+      border-bottom: 1px solid #e5e5e5;
     }
 
-    .project-info h4 {
-      color: #004d26;
-      font-size: 18px;
-      margin-bottom: 10px;
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
     }
 
-    .project-info p {
-      font-size: 15px;
-      color: #555;
+    .nav a {
+      margin-left: 24px;
+      font-weight: 500;
     }
 
+    .btn {
+      background-color: #1f7a4d;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    /* ===== BRAND ===== */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 44px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    /* ===== INNER HERO ===== */
+    .page-hero {
+      position: relative;
+      padding: 100px 0;
+      background-image: url("images/projects-hero.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(15, 42, 29, 0.6);
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      font-size: 36px;
+    }
+
+    /* ===== PROJECT BLOCKS ===== */
+    .project-block {
+      border: 1px solid #e5e5e5;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    .project-block h2 {
+      color: #0f2a1d;
+      margin-bottom: 12px;
+    }
+
+    .project-block p {
+      margin-bottom: 12px;
+    }
+
+    /* ===== FOOTER ===== */
     footer {
-      background-color: #004d26;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      nav {
-        margin-top: 10px;
-      }
-      .hero {
-        height: 200px;
-      }
-      .hero h2 {
-        font-size: 22px;
-      }
+      background-color: #0f2a1d;
+      color: #ffffff;
+      padding: 40px 0;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1>O-Six Energy Limited</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav">
+      <div class="brand">
+        <img src="images/logo.png" alt="O-Six Energy Logo" />
+        <strong>O-Six Energy</strong>
+      </div>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Our Completed Projects</h2>
-  </section>
-
-  <section class="projects-section">
-    <h3>Featured Works</h3>
-
-    <div class="project-grid">
-      <a href="project-single.html" class="project-card">
-        <img src="images/IMG_0350.JPG.jpg" alt="Mini-Grid Construction Project">
-        <div class="project-info">
-          <h4>Mini-Grid Construction - Kaduna</h4>
-          <p>Full civil and structural works for a 50kW solar mini-grid project.</p>
-        </div>
-      </a>
-
-      <a href="project-single.html" class="project-card">
-        <img src="images/IMG_0344.JPG" alt="Solar Foundation Project">
-        <div class="project-info">
-          <h4>Solar Foundation Base - Taraba</h4>
-          <p>Installation and construction of durable PV foundation structures.</p>
-        </div>
-      </a>
-
-      <a href="project-single.html" class="project-card">
-        <img src="images/IMG_0280.JPG" alt="Off-Grid Infrastructure Project">
-        <div class="project-info">
-          <h4>Off-Grid Infrastructure - Benue</h4>
-          <p>Perimeter construction and base engineering for rural off-grid deployment.</p>
-        </div>
-      </a>
-
-      <a href="project-single.html" class="project-card">
-        <img src="images/IMG_0348.JPG (1).jpg" alt="Equipment Shed Construction">
-        <div class="project-info">
-          <h4>Equipment Shed & Solar Support Works</h4>
-          <p>Design and construction of secure equipment sheds for energy systems.</p>
-        </div>
-      </a>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Projects & Experience</h1>
     </div>
   </section>
 
+  <!-- PROJECTS CONTENT -->
+  <section>
+    <div class="container">
+
+      <div class="project-block">
+        <h2>Renewable Mini-Grid Infrastructure</h2>
+        <p>
+          O-Six Energy has experience supporting renewable mini-grid projects
+          through civil construction and infrastructure preparation for
+          decentralized power systems.
+        </p>
+        <p>
+          Our work focuses on site readiness, structural foundations, access
+          infrastructure, and alignment with electrical and mechanical system
+          requirements.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h2>Transmission & Distribution Networks</h2>
+        <p>
+          We have delivered transmission and distribution services involving
+          pole erection, conductor stringing, and low-tension and high-tension
+          network installations.
+        </p>
+        <p>
+          These projects are executed with strict attention to safety,
+          regulatory compliance, and long-term system reliability.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h2>Solar Installations for Homes & Businesses</h2>
+        <p>
+          O-Six Energy has implemented solar energy solutions for residential,
+          commercial, and institutional clients seeking reliable and
+          cost-effective power.
+        </p>
+        <p>
+          Each installation is designed to meet client energy needs while
+          ensuring system durability and ease of maintenance.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h2>Project Readiness & Partnerships</h2>
+        <p>
+          We work collaboratively with developers, EPC contractors, government
+          agencies, and development partners to deliver renewable energy
+          infrastructure projects.
+        </p>
+        <p>
+          Detailed project case studies and references are available upon
+          request.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 O-Six Energy Limited. All rights reserved.</p>
+    <div class="container">
+      <p>© 2026 O-Six Energy Nigeria Limited. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
