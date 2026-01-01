@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | O-Six Energy Limited</title>
+<style>
+  :root {
+    --primary: #1b5e20;
+    --secondary: #f4f4f4;
+    --accent: #f9a825;
+    --text: #333;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Lato", Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.6;
+  }
+
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+
+  .mission, .vision, .values {
+    background: var(--secondary);
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .values ul {
+    list-style: square;
+    padding-left: 30px;
+  }
+
+  footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: var(--primary);
+      width: 100%;
+    }
+
+    nav ul.active {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .menu-toggle {
+      display: block;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+<header>
+  <h1>O-Six Energy Ltd</h1>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h2>About O-Six Energy Limited</h2>
+  <p>
+    O-Six Energy Limited is a high-rising engineering servicing firm focusing on the civil construction of durable mini-grid and off-grid solar renewable energy infrastructures for global renewable energy companies.
+  </p>
+  <p>
+    Operating across Nigeria and Sub-Saharan Africa, O-Six Energy ensures every project is built on solid foundations — from PV bases to equipment sheds, perimeter fencing, and all civil works that power renewable installations.
+  </p>
+  <p>
+    Our team has a combined experience of over 25 years in the energy and construction industries, enabling us to deliver quality that sustains the renewable future.
+  </p>
+</section>
+
+<section class="mission">
+  <h2>Our Mission</h2>
+  <p>
+    To provide world-class civil engineering support for renewable energy infrastructure projects, ensuring durability, safety, and environmental harmony across Africa’s growing clean energy landscape.
+  </p>
+</section>
+
+<section class="vision">
+  <h2>Our Vision</h2>
+  <p>
+    To be the most trusted engineering partner for renewable energy companies in Africa — known for precision, reliability, and excellence in sustainable infrastructure delivery.
+  </p>
+</section>
+
+<section class="values">
+  <h2>Core Values</h2>
+  <ul>
+    <li><strong>Integrity:</strong> We operate with transparency and responsibility.</li>
+    <li><strong>Quality:</strong> Our work stands the test of time.</li>
+    <li><strong>Innovation:</strong> We adapt modern engineering to local realities.</li>
+    <li><strong>Collaboration:</strong> Partnering with global firms for shared success.</li>
+    <li><strong>Sustainability:</strong> Every project contributes to a greener planet.</li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 O-Six Energy Limited. All Rights Reserved. | info@osixenergy.com | +234 000 000 0000
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
+</body>
+</html>

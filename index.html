@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>O-Six Energy Limited | Building the Foundation for Renewable Energy</title>
+<style>
+  :root {
+    --primary: #1b5e20; /* deep green */
+    --secondary: #f4f4f4;
+    --accent: #f9a825; /* solar yellow */
+    --text: #333;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Lato", Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.6;
+  }
+
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("images/panels.jpg") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .about h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .services {
+    background: var(--secondary);
+  }
+
+  .services h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .service-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+
+  .service-item:hover {
+    transform: translateY(-5px);
+  }
+
+  footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      background: var(--primary);
+    }
+    nav ul.active {
+      display: flex;
+      margin-top: 10px;
+    }
+    .menu-toggle {
+      display: block;
+      color: #fff;
+    }
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+<header>
+  <h1>O-Six Energy Ltd</h1>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Building the Foundation for Renewable Energy</h2>
+  <p>Engineering the civil backbone of Africa’s solar revolution.</p>
+</section>
+
+<section class="about">
+  <h2>Welcome to O-Six Energy Limited</h2>
+  <p>We are a high-rising engineering servicing firm focusing on the civil construction of durable mini-grid and off-grid solar renewable energy infrastructures for global renewable energy companies.</p>
+  <p>Operating across Nigeria and Sub-Saharan Africa, O-Six Energy ensures every project is built on solid foundations — from PV bases to equipment sheds, perimeter fencing, and all civil works that power renewable installations.</p>
+</section>
+
+<section class="services">
+  <h2>Our Core Services</h2>
+  <div class="service-list">
+    <div class="service-item"><strong>Civil Works for Renewable Projects</strong></div>
+    <div class="service-item"><strong>Solar Base & Equipment Infrastructure</strong></div>
+    <div class="service-item"><strong>Structural & Perimeter Construction</strong></div>
+    <div class="service-item"><strong>Project Support for Global Energy Firms</strong></div>
+    <div class="service-item"><strong>Home Solar Installations & Maintenance</strong></div>
+    <div class="service-item"><strong>Design & Construction of Roads & Bridges </strong></div>
+    <div class="service-item"><strong>Real Estate & Architectural Construction</strong></div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 O-Six Energy Limited. All Rights Reserved. | info@osixenergy.com | +234 000 000 0000
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
+</body>
+</html>
