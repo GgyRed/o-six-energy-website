@@ -12,6 +12,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+    
 
     /* ===== BRAND / LOGO ===== */
 .brand {
@@ -23,6 +24,14 @@
 .brand img {
   height: 44px;
   width: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
     /* ===== BASE ===== */
@@ -65,6 +74,11 @@
       margin-left: 24px;
       font-weight: 500;
     }
+
+    nav a.active {
+  color: #1f7a4d;
+  font-weight: 600;
+}
 
     .btn {
       background-color: #1f7a4d;
@@ -145,17 +159,19 @@
   <!-- HEADER -->
   <header>
     <div class="container nav">
-      <div class="brand">
+    <a href="index.html" class="brand">
   <img src="images/logo.png" alt="O-Six Energy Logo" />
-  <strong>O-Six Energy Nigeria Limited</strong>
-</div>
+  <strong>O-Six Energy Nigeria Limited/strong>
+</a>
+
 
       <nav>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html" class="btn">Contact</a>
-      </nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html" class="btn">Contact</a>
+</nav>
     </div>
   </header>
 
