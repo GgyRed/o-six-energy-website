@@ -13,6 +13,40 @@
       box-sizing: border-box;
     }
 
+    /* ===== MOBILE NAVIGATION ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px;
+  }
+
+  .nav-links a {
+    margin: 12px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
     /* ===== BASE ===== */
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -171,6 +205,15 @@
   </style>
 </head>
 
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
+
 <body>
 
   <!-- HEADER -->
@@ -181,13 +224,17 @@
   <strong>O-Six Energy</strong>
 </a>
 
- <nav>
+ <nav class="nav-links">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <a href="projects.html">Projects</a>
   <a href="contact.html" class="btn">Contact</a>
 </nav>
+
+<div class="menu-toggle" id="menuToggle">
+  ☰
+</div>
 
     </div>
   </header>
