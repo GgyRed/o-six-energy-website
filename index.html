@@ -13,40 +13,6 @@
       box-sizing: border-box;
     }
     
-/* ===== MOBILE NAVIGATION ===== */
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #ffffff;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    border-top: 1px solid #e5e5e5;
-    padding: 20px;
-  }
-
-  .nav-links a {
-    margin: 12px 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
     /* ===== BRAND / LOGO ===== */
 .brand {
   display: flex;
@@ -184,6 +150,42 @@
     footer p {
       opacity: 0.9;
     }
+
+    /* ===== MOBILE NAVIGATION ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    border-top: 1px solid #e5e5e5;
+    z-index: 999;
+  }
+
+  .nav-links a {
+    margin: 12px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
   </style>
 </head>
 
@@ -200,27 +202,26 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="container nav">
+<header>
+  <div class="container nav">
     <a href="index.html" class="brand">
-  <img src="images/logo.png" alt="O-Six Energy Logo" />
-  <strong>O-Six Energy</strong>
-</a>
+      <img src="images/logo.png" alt="O-Six Energy Logo" />
+      <strong>O-Six Energy</strong>
+    </a>
 
-    <nav class="nav-links">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html" class="btn">Contact</a>
-</nav>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="btn">Contact</a>
+    </nav>
 
-<div class="menu-toggle" id="menuToggle">
-  ☰
-</div>
-
+    <div class="menu-toggle" id="menuToggle">
+      ☰
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero">
@@ -274,6 +275,18 @@
       <p>© 2026 O-Six Energy Nigeria Limited. All rights reserved.</p>
     </div>
   </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
